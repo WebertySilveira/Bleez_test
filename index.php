@@ -96,10 +96,10 @@
                     <td><?php echo $nome ?></td>
                     <td><?php echo $preco ?></td>
                     <td><?php echo $descricao ?></td>
-                    <td><?php echo $imagem ?></td>
+                    <td><?php echo "<img src='images/$imagem' style='width:100px'>" ?></td>
                     <td> 
                         <a class="btn btn-primary" href="edit.php?id=<?php echo $id ?>" role="button">Editar</a>
-                        <a class="btn btn-primary" href="deletar_produto.php?id=<?php echo $id ?>" role="button">Remover</a>
+                        <a class="btn btn-primary" href="Controller/delete.php?id=<?php echo $id ?>" role="button">Remover</a>
                     </td>
                 </tr>
 

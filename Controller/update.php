@@ -21,7 +21,7 @@
       // execute the query
       $stmt->execute();
     
-      header( "Location: ../index.php", true, 303);
+      header( "Refresh:0; ../index.php", true, 303);
     } catch(PDOException $e) {
       
     }

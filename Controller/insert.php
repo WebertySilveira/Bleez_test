@@ -14,7 +14,7 @@
 
         $conn->exec($sql);
 
-        header( "Refresh:0; ../index.php", true, 303);
+        header( "Location: ../index.php", true, 303);
 
     } catch(PDOException $e) {
 
