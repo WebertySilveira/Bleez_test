@@ -59,6 +59,60 @@
 
 
 
+
+          <div class="container" style="margin-top:40px">
+            <h3> Lista de Produtos </h3>
+
+
+            <table class="table table-sm table-dark">
+            <thead>
+                <tr>
+                <th scope="col">nome</th>
+                <th scope="col">preco</th>
+                <th scope="col">descricao</th>
+                <th scope="col">imagem</th>
+                <th scope="col">Ação</th>
+                </tr>
+            </thead>
+
+
+                <tr>
+                    <?php
+
+                      require_once "Controller/connect.php";
+
+                      $consulta = $conn->query("SELECT id, nome, preco, descricao, imagem FROM produtos;");
+
+                      while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
+                        $id         =  $linha['id'];
+                        $imagem     =  $linha['imagem'];
+                        $nome       =  $linha['nome'];
+                        $preco      =  $linha['preco'];
+                        $descricao  =  $linha['descricao'];
+                    ?>
+                </tr>
+
+                <tr>
+                    <td><?php echo $nome ?></td>
+                    <td><?php echo $preco ?></td>
+                    <td><?php echo $descricao ?></td>
+                    <td><?php echo $imagem ?></td>
+                    <td> 
+                        <a class="btn btn-primary" href="edit.php?id=<?php echo $id ?>" role="button">Editar</a>
+                        <a class="btn btn-primary" href="deletar_produto.php?id=<?php echo $id ?>" role="button">Remover</a>
+                    </td>
+                </tr>
+
+                    <?php } ?>
+                </tr>
+                
+            </table>
+
+        </div>
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
