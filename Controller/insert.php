@@ -17,6 +17,6 @@
         header( "Location: ../index.php", true, 303);
 
     } catch(PDOException $e) {
-
+        header( "Location: ../index.php", true, 303);
     }
 ?>

@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="styles/style.css">
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <title>Bleez Teste</title>
-
+        
+        <title>Bleez Test</title>
 
         <?php 
           require_once "Controller/createdb.php";
@@ -63,10 +63,10 @@
           <div class="container" style="margin-top:40px">
             <h3> Lista de Produtos </h3>
 
-
-            <table class="table table-sm table-dark">
+            <table class="table table-sm table-dark" style="table-layout: fixed; word-break: break-all;">
             <thead>
                 <tr>
+                <th scope="col">id</th>
                 <th scope="col">nome</th>
                 <th scope="col">preco</th>
                 <th scope="col">descricao</th>
@@ -93,10 +93,12 @@
                 </tr>
 
                 <tr>
+                    
+                    <td><?php echo $id ?></td>
                     <td><?php echo $nome ?></td>
-                    <td><?php echo $preco ?></td>
+                    <td><?php echo "R$$preco,00" ?></td>
                     <td><?php echo $descricao ?></td>
-                    <td><?php echo "<img src='images/$imagem' style='width:100px'>" ?></td>
+                    <td><?php echo "<img src='images/$imagem' style='width:150px'>" ?></td>
                     <td> 
                         <a class="btn btn-primary" href="edit.php?id=<?php echo $id ?>" role="button">Editar</a>
                         <a class="btn btn-primary" href="Controller/delete.php?id=<?php echo $id ?>" role="button">Remover</a>

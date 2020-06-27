@@ -13,7 +13,7 @@
         $imagem     =  $_POST['imagem'];
 
 
-     echo $sql = "UPDATE produtos SET nome='$nome', preco='$preco', descricao='$descricao', imagem='$imagem' WHERE id = $id";
+     $sql = "UPDATE produtos SET nome='$nome', preco='$preco', descricao='$descricao', imagem='$imagem' WHERE id = $id";
 
       // Prepare statement
       $stmt = $conn->prepare($sql);
