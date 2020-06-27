@@ -50,6 +50,7 @@
                 <div class="form-row">
                   <div class="col-md-8 mb-3">
                     <label>Nome</label>
+                    <input type="text" name="id" value="<?php echo $id ?>" class="form-control"  placeholder="Nome do Produto" style="display:none">
                     <input type="text" name="nome" value="<?php echo $nome ?>" class="form-control"  placeholder="Nome do Produto" required>
                   </div>
 
