@@ -1,6 +1,13 @@
 # BLEZZ TEST - CRUD
 
 
+UTILIZADO:
+
+- VISUAL STUDIO CODE;
+- WAMPSERVER
+- BANCO DE DADOS MYSQL
+
+
 -----------------------------------
 FONTE DE PESQUISA:
 * [W3SCHOOL](https://www.w3schools.com/php/default.asp)
@@ -44,7 +51,7 @@ AO PREENCHER E CLICAR EM ENVIAR, A INFORMAÇÃO É ARMAZENADA NO BANCO E RETORNA
 
 PRODUTO ENVIADO E TELA ATUALIZADA, PODEMOS VER AS INFORMAÇÕES.
 
-*Na pasta images estão armazenadas as imagens, caso precise adicionar uma nova basta inserir na pasta e selecionar pelo formulário. *
+*Na pasta images estão armazenadas as imagens, caso precise adicionar uma nova basta inserir na pasta e selecionar pelo formulário.*
 
 ![](https://github.com/WebertySilveira/Bleez_test/blob/master/github/Enviado.png)
 
